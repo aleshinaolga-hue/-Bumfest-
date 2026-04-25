@@ -1,0 +1,587 @@
+:root {
+  --text-primary: #181818;
+  --text-light: #f6f6f6;
+  --bg-primary: #f6f6f6;
+  --font-primary: Monrope, sans-serif;
+  --font-secondary: Onder, sans-serif;
+  --transition: all 0.3s ease;
+  --pink-color: #ff8bc2;
+  --purple-color: #966de6;
+  --green-color: #a9df53;
+  --yellow-color: #fde760;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: Monrope;
+  src: url("/fonts/Manrope-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: Onder;
+  src: url(/fonts/ONDER-REGULAR.TTF);
+  font-weight: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.header {
+  background-color: #f6f6f6;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding-left: clamp(15px, 5%, 100px);
+  padding-right: clamp(15px, 5%, 100px);
+}
+.menu {
+  width: 100%;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 10 auto;
+  padding: 10;
+  height: 70px;
+  gap: 2rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-family: Onder;
+  gap: 0.5rem;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  text-decoration: none;
+  line-height: 1;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.menu-item {
+  list-style-type: none;
+  margin: 5px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  padding: 8px 12px;
+  display: inline-block;
+  color: var(--text-primary);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.menu-item a:hover {
+  background-color: var(--pink-color);
+  color: var(--text-light);
+  border-radius: 24px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 4px;
+}
+.bar {
+  width: 25px;
+  height: 3px;
+  background: var(--text-primary);
+  transition: var(--transition);
+}
+
+.describtion {
+  background-image: url("image/about1.jpg");
+  width: 100%;
+  height: 582px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+}
+
+.section {
+  margin-bottom: 60px;
+  margin-top: 10px;
+  padding: 60px 0;
+}
+.text {
+  height: 582px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  color: #f6f6f6;
+  font-size: clamp(1rem, 3vw, 24px);
+  align-items: center;
+  text-align: center;
+  padding: 20px 15%;
+  line-height: 32px;
+}
+
+.hero {
+  background-image: url("image/herobackgr.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-left: clamp(16px, 5vw, 100px);
+  position: relative;
+  margin-bottom: 36px;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: left;
+}
+
+.hero-title {
+  font-family: Onder, sans-serif;
+  font-size: clamp(16px, 8vw, 56px);
+  color: var(--text-primary);
+  margin-bottom: 20px;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.pink-text {
+  color: var(--pink-color);
+}
+
+.hero-subtitle {
+  font-size: clamp(16px, 4vw, 24px);
+  color: var(--text-primary);
+  font-family: var(--font-primary);
+  margin-bottom: 40px;
+  text-align: left;
+  line-height: 1.5;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 56px;
+  background-color: #7037e2;
+  color: var(--text-light);
+  text-decoration: none;
+  border-radius: 48px;
+  transition: var(--transition);
+  border: none;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--pink-color);
+  color: var(--text-light);
+  transform: translateY(-6px);
+}
+
+.h2-title {
+  font-family: var(--font-primary);
+  font-size: clamp(24px, 5vw, 56px);
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+
+/* Что вас ждет */
+
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  height: 320px;
+  transition: var(--transition);
+}
+
+.card-pink {
+  background-color: var(--pink-color);
+}
+
+.card-purple {
+  background-color: var(--purple-color);
+}
+
+.card-green {
+  background-color: var(--green-color);
+}
+
+.card-yellow {
+  background-color: var(--yellow-color);
+}
+
+.card-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card-content {
+  padding-left: 24px;
+  padding-bottom: 24px;
+}
+
+.card-title {
+  font-style: var(--font-primary);
+  font-size: clamp(16px, 5vw, 32px);
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  font-style: var(--font-primary);
+  font-size: 14px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-image img {
+  transform: scale(1.1);
+}
+
+/*ТАБЛИЦА РАСПИСАНИЯ */
+
+.schedule-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0px 20px;
+}
+
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: var(--font-primary);
+  background-color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.schedule-table-wrapper {
+  overflow-x: auto;
+  width: 100%;
+  border-radius: 24px
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 16px 24px;
+  border-bottom: 1px solid #d4d4d4;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  text-align: left;
+  font-size: 16px;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table th {
+  background-color: rgba(255, 139, 194, 0.5);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text-primary);
+}
+
+.schedule-table tr {
+  height: 64px;
+  transition: background-color 0.3s ease;
+}
+
+.schedule-table tr:hover td {
+  background-color: #e4e4e4;
+}
+
+.schedule-table tr:hover th {
+  background-color: rgba(255, 139, 194, 0.5);
+}
+
+/* ===== ВИДЕО БЛОК ===== */
+.video-section {
+  padding: 40px 0;
+}
+
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 24px;
+}
+
+
+/* Планшеты - меню сжимается */
+@media (max-width: 1024px) {
+  .container {
+    gap: 1rem;
+  }
+  
+  .menu-item a {
+    padding: 8px 8px;
+    font-size: 14px;
+  }
+
+  
+  .logo {
+    font-size: 14px;
+  }
+
+.hero-title {
+    font-size: 48px; 
+    line-height: 1.8;
+  }
+
+  .hero {
+    background-size: cover;
+    background-position: top right;
+    min-height: 70vh;
+  }
+
+  .describtion {
+    background-size: cover;
+    background-position: top left;
+  }
+}
+
+/* Планшеты */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    gap: 0;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .menu-item a {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .hero {
+    background-size: cover;
+    background-position: top right;
+    min-height: 70vh;
+  }
+
+  .hero-title {
+    font-size: 24px; 
+    line-height: 1.8;
+  }
+  
+  .hero-subtitle {
+    font-size: 16px;
+  }
+  
+  .button {
+    padding: 10px 24px;
+  }
+
+  .describtion {
+    background-size: cover;
+    background-position: top left;
+    min-height: 70vh;
+  }
+
+  .schedule-table-wrapper {
+    overflow-x: auto;
+  }
+
+.schedule-table {
+    min-width: 600px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .schedule-table tr {
+    height: 56px;
+  }
+}
+
+/* Маленькие телефоны */
+@media (max-width: 480px) {
+  .header {
+    padding: 0 16px;
+  }
+  
+  .hero {
+    padding: 70px 16px 30px;
+  }
+  
+  .button {
+    padding: 10px 24px;
+  }
+  
+  .card-image {
+    height: 180px;
+  }
+
+  .hero {
+    background-size: cover;
+    background-position: top right; 
+    min-height: 70vh;
+  }
+  .hero-title {
+    font-size: 16px; 
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: 14px;
+  }
+  
+  .button {
+    padding: 10px 24px;
+  }
+
+  .schedule-table {
+    min-width: 450px;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+  
+  .schedule-table tr {
+    height: 48px;
+  }
+
+    .schedule-table-wrapper {
+    overflow-x: auto;
+  }
+
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+  
+  .schedule-table tr {
+    height: 56px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .hamburger {
+    display: flex;
+  }
+  
+  .nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    flex-direction: column;
+    background-color: #f6f6f6;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    padding: 20px 0;
+    gap: 0;
+  }
+  
+  .nav-menu.active {
+    left: 0;
+  }
+  
+  .menu-item a {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 14px;
+  }
+
+  .hero-title {
+    font-size: 28px; 
+    line-height: 1.8;
+  }
+}
