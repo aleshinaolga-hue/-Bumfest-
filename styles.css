@@ -833,7 +833,7 @@ body {
   .hero {
     padding: 70px 16px 30px;
     background-size: cover;
-    background-position: top center;
+    background-position: 70% top ;
     min-height: 70vh;
   }
 
