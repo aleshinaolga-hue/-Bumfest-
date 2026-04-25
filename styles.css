@@ -833,7 +833,7 @@ body {
   .hero {
     padding: 70px 16px 30px;
     background-size: cover;
-    background-position: top right;
+    background-position: top center;
     min-height: 70vh;
   }
 
@@ -874,7 +874,7 @@ body {
   }
 
   .footer-logo {
-    font-size: 32px;
+    font-size: 28px;
   }
 
   .footer-links h4,
