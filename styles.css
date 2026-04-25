@@ -17,13 +17,13 @@
 
 @font-face {
   font-family: Monrope;
-  src: url("/fonts/Manrope-Medium.ttf");
+  src: url("fonts/Manrope-Medium.ttf");
   font-weight: 500;
   font-display: swap;
 }
 @font-face {
   font-family: Onder;
-  src: url(/fonts/ONDER-REGULAR.TTF);
+  src: url("fonts/ONDER-REGULAR.TTF");
   font-weight: normal;
   font-display: swap;
 }
