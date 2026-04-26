@@ -155,7 +155,7 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding-left: clamp(16px, 5vw, 100px);
+  padding: 100px clamp(16px, 5vw, 100px) 40px;
   position: relative;
   margin-bottom: 36px;
 }
