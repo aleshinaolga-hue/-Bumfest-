@@ -37,6 +37,8 @@ body {
   line-height: 1.5;
 }
 
+/* Хедер */
+
 .header {
   background-color: #f6f6f6;
   position: fixed;
@@ -118,18 +120,6 @@ body {
   transition: var(--transition);
 }
 
-.describtion {
-  background-image: url("image/about1.jpg");
-  width: 100%;
-  height: 582px;
-  display: flex;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  align-items: center;
-  margin: 0;
-}
-
 .section {
   margin-bottom: 0px;
   padding: 60px 0;
@@ -147,6 +137,8 @@ body {
   padding: 20px 15%;
   line-height: 32px;
 }
+
+/* Херо */
 
 .hero {
   background-image: url("image/herobackgr.jpg");
@@ -215,6 +207,20 @@ body {
   margin-bottom: 60px;
   font-weight: 700;
 }
+
+.describtion {
+  background-image: url("image/about1.jpg");
+  width: 100%;
+  height: 582px;
+  display: flex;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  margin: 0;
+}
+
+/* Карточки */
 
 .card-container {
   max-width: 1200px;
